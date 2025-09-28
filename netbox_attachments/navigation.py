@@ -1,7 +1,7 @@
 from netbox.plugins import PluginMenu, PluginMenuItem
 
 menu = PluginMenu(
-    label="Attachments",
+    label="附件管理",
     icon_class="mdi mdi-paperclip",
     groups=(
         (
@@ -9,7 +9,7 @@ menu = PluginMenu(
             (
                 PluginMenuItem(
                     link="plugins:netbox_attachments:netboxattachment_list",
-                    link_text="NetBox Attachments",
+                    link_text="附件",
                     permissions=["netbox_attachments.view_netboxattachment"],
                 ),
             ),

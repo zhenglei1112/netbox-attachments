@@ -24,14 +24,14 @@ def get_missing_parent_row_class(record):
 
 
 class NetBoxAttachmentTable(NetBoxTable):
-    name = tables.TemplateColumn(template_code=ATTACHMENT_LINK)
+    name = tables.TemplateColumn(template_code=ATTACHMENT_LINK, verbose_name=("名称"))
     object_type = columns.ContentTypeColumn(
         verbose_name=("对象类型"),
     )
     parent = tables.Column(verbose_name=("关联对象"), linkify=True, orderable=False)
     tags = columns.TagColumn()
-    file = tables.FileColumn()
-    size = tables.TemplateColumn(template_code=FILE_SIZE)
+    file = tables.FileColumn(verbose_name=("文件名"))
+    size = tables.TemplateColumn(template_code=FILE_SIZE，verbose_name=("大小"))
     actions = columns.ActionsColumn(extra_buttons=DOWNLOAD_BUTTON)
 
     class Meta(NetBoxTable.Meta):
