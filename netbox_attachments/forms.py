@@ -51,12 +51,12 @@ class NetBoxAttachmentForm(NetBoxModelForm):
 
 class NetBoxAttachmentFilterForm(NetBoxModelFilterSetForm):
     model = NetBoxAttachment
-    name = forms.CharField(required=False,verbose_name=_("名称"))
-    description = forms.CharField(required=False,verbose_name=_("描述"))
+    name = forms.CharField(required=False,verbose_name=("名称"))
+    description = forms.CharField(required=False,verbose_name=("描述"))
     object_type_id = DynamicModelMultipleChoiceField(
         queryset=ObjectType.objects.all(),
         required=False,
-        label=_("Object Type"),
+        label=("Object Type"),
         widget=APISelectMultiple(
             api_url="/api/extras/object-types/",
         ),

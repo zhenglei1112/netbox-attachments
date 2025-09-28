@@ -11,8 +11,8 @@ class NetBoxAttachmentFilterSet(NetBoxModelFilterSet):
     q = django_filters.CharFilter(method="search", label="Search")
     created = django_filters.DateTimeFilter()
     object_type = ContentTypeFilter()
-    name = django_filters.CharFilter(lookup_expr="icontains")
-    description = django_filters.CharFilter(lookup_expr="icontains")
+    name = django_filters.CharFilter(lookup_expr="icontains",verbose_name=("名称"))
+    description = django_filters.CharFilter(lookup_expr="icontains",verbose_name=("描述"))
     tag = TagFilter()
 
     class Meta:
