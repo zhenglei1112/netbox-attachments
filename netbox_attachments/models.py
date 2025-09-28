@@ -23,6 +23,7 @@ class NetBoxAttachment(NetBoxModel):
     object_id = models.PositiveBigIntegerField()
     file = models.FileField(
         upload_to=attachment_upload,
+        verbose_name=_("文件名")
     )
     size = models.PositiveBigIntegerField(
         editable=False,
@@ -30,7 +31,7 @@ class NetBoxAttachment(NetBoxModel):
         blank=True,
         help_text="Size of the file in bytes",
     )
-    name = models.CharField(max_length=254, blank=True)
+    name = models.CharField(max_length=254, blank=True,verbose_name=_("名称"))
     description = models.CharField(
         verbose_name=_("description"), max_length=200, blank=True
     )
