@@ -96,7 +96,7 @@ def register_attachment_tab_view(model: Type[Model]) -> None:
         template_name = "netbox_attachments/generic_tab_list.html"
 
         tab = ViewTab(
-            label="Attachments",
+            label="附件",
             badge=lambda obj: NetBoxAttachment.objects.filter(
                 object_type=ObjectType.objects.get_for_model(obj),
                 object_id=obj.id,
