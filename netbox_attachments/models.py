@@ -42,8 +42,8 @@ class NetBoxAttachment(NetBoxModel):
 
     class Meta:
         ordering = ("name", "pk")  # name may be non-unique
-        verbose_name_plural = "NetBox Attachments"
-        verbose_name = "NetBox Attachment"
+        verbose_name_plural = "附件"
+        verbose_name = "附件"
 
     def __str__(self):
         if self.name:

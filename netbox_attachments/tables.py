@@ -26,9 +26,9 @@ def get_missing_parent_row_class(record):
 class NetBoxAttachmentTable(NetBoxTable):
     name = tables.TemplateColumn(template_code=ATTACHMENT_LINK)
     object_type = columns.ContentTypeColumn(
-        verbose_name=("Object Type"),
+        verbose_name=("对象类型"),
     )
-    parent = tables.Column(verbose_name=("Parent"), linkify=True, orderable=False)
+    parent = tables.Column(verbose_name=("关联对象"), linkify=True, orderable=False)
     tags = columns.TagColumn()
     file = tables.FileColumn()
     size = tables.TemplateColumn(template_code=FILE_SIZE)
