@@ -35,7 +35,7 @@ class NetBoxAttachment(NetBoxModel):
     description = models.CharField(
         verbose_name=_("description"), max_length=200, blank=True
     )
-    comments = models.TextField(blank=True)
+    comments = models.TextField(blank=True,verbose_name=_("评论"))
 
     objects = RestrictedQuerySet.as_manager()
 
