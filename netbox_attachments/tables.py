@@ -32,6 +32,7 @@ class NetBoxAttachmentTable(NetBoxTable):
     tags = columns.TagColumn()
     file = tables.FileColumn(verbose_name=("文件名"))
     size = tables.TemplateColumn(template_code=FILE_SIZE,verbose_name=("大小"))
+    object_id = tables.Column(verbose_name=("对象ID"))
     actions = columns.ActionsColumn(extra_buttons=DOWNLOAD_BUTTON)
 
     class Meta(NetBoxTable.Meta):
