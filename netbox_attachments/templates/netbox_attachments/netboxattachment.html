@@ -5,38 +5,38 @@
   <div class="row mb-3">
     <div class="col col-md-6">
       <div class="card">
-        <h5 class="card-header">Attachments</h5>
+        <h5 class="card-header">附件</h5>
         <div class="card-body">
           <table class="table table-hover attr-table">
             <tr>
-              <th scope="row">Name</th>
+              <th scope="row">名称</th>
               <td>{{ object }}</td>
             </tr>
             <tr>
-              <th scope="row">Description</th>
+              <th scope="row">描述</th>
               <td>{{ object.description }}</td>
             </tr>
             <tr>
-              <th scope="row">Filename</th>
+              <th scope="row">文件名</th>
               <td>
                 <a href="{{ object.file.url }}" target="_blank">{{ object.filename }}</a>
               </td>
             </tr>
             <tr>
-              <th scope="row">Size</th>
+              <th scope="row">大小</th>
               <td>{{ object.size|filesizeformat }}</td>
             </tr>
             <tr>
-              <th scope="row">Parent</th>
+              <th scope="row">关联对象</th>
               <td>{{ object.parent|linkify }}</td>
             </tr>
             <tr>
-              <th scope="row">Created</th>
-              <td>{{ object.created }}</td>
+              <th scope="row">创建时间</th>
+              <td>{{ object.created |date:"Y-m-d H:i"}}</td>
             </tr>
             <tr>
-              <th scope="row">Updated</th>
-              <td>{{ object.last_updated }}</td>
+              <th scope="row">最后修改时间</th>
+              <td>{{ object.last_updated |date:"Y-m-d H:i"}}</td>
             </tr>
           </table>
         </div>
