@@ -18,7 +18,7 @@ from netbox_attachments.utils import validate_object_type
 
 
 class NetBoxAttachmentForm(NetBoxModelForm):
-    comments = CommentField(label="Comment")
+    comments = CommentField()
 
     class Meta:
         model = NetBoxAttachment
